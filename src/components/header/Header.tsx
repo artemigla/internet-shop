@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from '../../assets/store-shopper-svgrepo-com.svg';
 import cart from '../../assets/cart.svg';
 import style from './style.module.scss';
