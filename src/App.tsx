@@ -1,13 +1,18 @@
-import React from 'react';
-import { Header } from './components/header/Header';
-import { Main } from './components/content/Main';
 
-export const App: React.FC = () => {
-  
+import { Header } from './components/header/Header';
+import { Routes, Route } from 'react-router-dom';
+import { Main } from './pages/main/Main';
+import { Cart } from './pages/cart/Cart';
+
+export const App = () => {
+
   return (
-    <div>
+    <>
       <Header />
-      <Main />
-    </div>
+      <Routes>
+        <Route path='/internet-shop' element={<Main />} />
+        <Route path='/internet-shop/cart' element={<Cart />} />
+      </Routes>
+    </>
   )
 }

@@ -1,6 +1,8 @@
+import React from 'react';
 import logo from '../../assets/store-shopper-svgrepo-com.svg';
 import cart from '../../assets/cart.svg';
 import style from './style.module.scss';
+import { NavLink } from 'react-router-dom';
 
 export const Header: React.FC = () => {
 
@@ -21,11 +23,11 @@ export const Header: React.FC = () => {
                     style={{ fontSize: '26px', marginLeft: '93%', position: 'absolute', cursor: 'pointer' }}>
                 </i>
             </div>
-            <div className={style.rightcontent}>
+            <nav className={style.rightcontent}>
                 <div className={style.cart}>
-                    <img className={style.img} src={cart} alt="cart" />
+                    <NavLink to={'/internet-shop/cart'}><img className={style.img} src={cart} alt="cart" /></NavLink>
                 </div>
-            </div>
+            </nav>
         </header>
     )
 }

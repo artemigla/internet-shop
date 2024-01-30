@@ -4,6 +4,7 @@ import pricesvg from '../../assets/hryvnia_sign_icon_199061.svg';
 import style from './style.module.scss';
 
 export const Main: React.FC = () => {
+
     return (
         <div className={style.container}>
             <div className={style.brand}>

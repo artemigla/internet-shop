@@ -3,6 +3,7 @@
 GitHub-pages: https://artemigla.github.io/internet-shop/
 
 The project works with the following dependencies: node v19.0.0
+
 Run the project:
 
 1. open terminal
