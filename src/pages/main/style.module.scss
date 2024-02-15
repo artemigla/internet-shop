@@ -1,34 +1,14 @@
 .container {
     display: grid;
-    width: 100%;
+    max-width: 1320px;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 
-    .brand {
-        display: flex;
-        position: relative;
-        justify-content: space-around;
-        width: 100%;
-        height: 70px;
-        border-radius: 12px;
-        margin-right: 12px;
-        margin-bottom: 1%;
-        background-color: gray;
-
-        .namebrand {
-            display: flex;
-            align-items: center;
-
-            .titlebrand {
-                font-weight: bolder;
-                font-size: 21px;
-                border-radius: 7px;
-                padding: 5px;
-                color: white;
-                background-color: rgb(255, 115, 0);
-            }
-        }
+    .title {
+        opacity: 0.5;
+        text-transform: uppercase;
     }
-
     .wrapper {
         display: grid;
         margin-bottom: 12px;
@@ -38,17 +18,17 @@
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             width: 100%;
             gap: 10px;
+            border: none;
 
             .cart {
-                display: grid;
-                justify-content: space-around;
-                margin-right: 10px;
-                margin-left: 10px;
-                border-radius: 12px;
-                overflow: hidden;
+                cursor: pointer;
+                box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
+                padding: 18px;
+                border-radius: 4px;
+                transition: all 300ms linear;
 
-                h5 {
-                    color: green;
+                .title {
+                    opacity: 0.5;
                 }
 
                 .img {
@@ -56,22 +36,26 @@
                     height: 350px;
                     border-radius: 12px;
                     transition: transform 0.25s;
+                    object-fit: cover;
+                    border: none;
                     cursor: pointer;
                 }
 
-                .info {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    font-weight: bold;
-                    margin-top: 5px;
-                    font-size: 26px;
-
-                    .pricesvg {
-                        margin: auto;
-                    }
-                }
             }
+
+                .btn {
+                    padding: 8px;
+                    width: 100px;
+                    margin: auto;
+                    border: none;
+                    background-color: rgb(27, 99, 255);
+                    cursor: pointer;
+                }
+
+                .btn:hover {
+                    opacity: 0.5;
+                }
+            
 
             .img:hover {
                 transform: scale(1.1);

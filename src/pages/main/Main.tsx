@@ -1,27 +1,30 @@
-import React from 'react';
-import api from '../../api/api.json';
-import pricesvg from '../../assets/hryvnia_sign_icon_199061.svg';
+import React, { useEffect } from 'react';
 import style from './style.module.scss';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { getProductsThunk } from '../../redux/slices/productSlice';
 
 export const Main: React.FC = () => {
 
+    const dispatch = useAppDispatch();
+    const { products } = useAppSelector((state => state.product));
+
+    useEffect(() => {
+        dispatch(getProductsThunk())
+    }, [dispatch])
+
+    console.log("CART ", products);
+
     return (
         <div className={style.container}>
-            <div className={style.brand}>
-                {api.results.map(({ id, brand }) => (
-                    <div key={id} className={style.namebrand}>
-                        <span className={style.titlebrand}>{brand}</span>
-                    </div>
-                ))}
-            </div>
+            <h2 className={style.title}>Our Products</h2>
             <main className={style.wrapper}>
                 <div className={style.content}>
-                    {api.results.map(({ id, price, images, brand }) => (
+                    {products.slice(0, 21).map(({ id, images, title, price }) => (
                         <div key={id} className={style.cart}>
-                            <img className={style.img} src={images} alt="" />
-                            <div className={style.info}>
-                                <p>{brand}</p>
-                                <h5> {price} <img className={style.pricesvg} src={pricesvg} alt="" /></h5>
+                            <img src={images[0]} className={style.img} alt="" />
+                            <p className={style.title}>{title}</p>
+                            <div>
+                                <p>$ {price}</p>
                             </div>
                         </div>
                     ))}
