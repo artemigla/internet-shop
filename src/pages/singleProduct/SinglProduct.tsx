@@ -9,7 +9,7 @@ import style from './style.module.scss';
 
 export const SinglProduct: React.FC = () => {
     const dispatch = useAppDispatch();
-    const { data: product } = useAppSelector(state => state.modal);
+    const { data: product } = useAppSelector((state): any => state.modal);
     const navigate = useNavigate();
     const [quantity, setQuantity] = useState(1);
 
