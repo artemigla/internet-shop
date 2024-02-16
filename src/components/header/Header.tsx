@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import logo from '../../assets/store-shopper-svgrepo-com.svg';
 import cart from '../../assets/cart.svg';
-import style from './style.module.scss';
 import { NavLink } from 'react-router-dom';
+import style from './style.module.scss';
 
 export const Header: React.FC = () => {
+
+    const [search, setSearch] = useState<string>("");
+
+    const handlerInput = (event: ChangeEvent<HTMLInputElement>) => {
+        setSearch(event.target.value)
+    }
 
     return (
         <header className={style.container}>
@@ -18,6 +24,8 @@ export const Header: React.FC = () => {
                 <input
                     type="search"
                     className={style.npt}
+                    value={search}
+                    onInput={handlerInput}
                 />
                 <i className="fa fa-search"
                     style={{ fontSize: '26px', marginLeft: '93%', position: 'absolute', cursor: 'pointer' }}>

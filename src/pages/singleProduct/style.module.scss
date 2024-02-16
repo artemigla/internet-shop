@@ -1,0 +1,115 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+
+    .productdetailsmodal {
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 2fr;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        background-color: white;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 4px;
+        padding: 36px 24px;
+        width: 90%;
+        max-width: 920px;
+
+        .modalclosebtn {
+            position: absolute;
+            right: -12px;
+            top: -12px;
+            width: 24px;
+            height: 24px;
+            background-color: #212529;
+            color: #fff;
+            transition: all 300ms linear;
+            border-radius: 50%;
+            border: none;
+            &:hover {
+                color: gold;
+            }
+        }
+
+        .detailscontent {
+            height: 50dvh;
+            .detailsimg {
+                max-width: 500px;
+                object-fit: cover;
+                margin-right: 10px;
+                .img {
+                    width: 100%;
+                    height: 50dvh;
+                }
+            }
+        }
+
+        .contentRight {
+            .detailInfo {
+                .title{
+                    color: #103755;
+                    opacity: 0.8;
+                    margin-bottom: 10px;
+                }
+                .description{
+                    font-weight: lighter;
+                    color: #63766b;
+                }
+
+                .price{
+                    margin-top: 17%;
+                    opacity: 0.7;
+                    border-bottom: 1px dashed #707b8e;
+                    padding-bottom: 6px;
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+            }
+
+            .quantity{
+                margin-top: 20px;
+
+                .counter{
+                    margin: 5px;
+                    font-size: 21px;
+                }
+                
+                .iconquantity{
+                    width: 32px;
+                    height: 32px;
+                    border: 2px solid rgb(190, 189, 189);
+                    border-radius: 3px;
+                }
+            }
+
+            .buttonCart{
+                position: relative;
+                margin-top: 12px;
+                border-radius: 5px;
+                padding: 10px 21px 10px 21px;
+                border: none;
+                background-color: rgb(14, 137, 238);
+                cursor: pointer;
+                
+                .btnicon{
+                    font-size: x-large;
+                    margin-right: 10px;
+                    color: white;
+                }
+
+                .btntext{
+                    font-size: larger;
+                    color: white;
+                }
+            }
+        }
+    }
+}

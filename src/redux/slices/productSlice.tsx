@@ -9,8 +9,8 @@ const initialState = {
 
 export const getProductsThunk = createAsyncThunk(
     'detail/getProductsThunk',
-    async (_, {dispatch}) => {
-      const response = await axios.get<IProducts>(`${BASE_URL}products/`)
+    async (search, {dispatch}) => {
+      const response = await axios.get<IProducts>(`${BASE_URL}products?search=${search}`)
       dispatch(getProducts(response.data))
     }
   )
