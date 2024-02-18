@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect } from 'react';
-import style from './style.module.scss';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { getProductsThunk } from '../../redux/slices/productSlice';
 import { setModalData, setIsModalVisible } from '../../redux/slices/modalSlice';
 import { SinglProduct } from '../singleProduct/SinglProduct';
+import style from './style.module.scss';
 
 export const Main: React.FC = () => {
 

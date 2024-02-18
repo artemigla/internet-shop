@@ -9,11 +9,11 @@ const initialState = {
 
 export const getProductsThunk = createAsyncThunk(
     'detail/getProductsThunk',
-    async (search, {dispatch}) => {
-      const response = await axios.get<IProducts>(`${BASE_URL}products?search=${search}`)
-      dispatch(getProducts(response.data))
+    async (search, { dispatch }) => {
+        const response = await axios.get<IProducts>(`${BASE_URL}products?search=${search}`)
+        dispatch(getProducts(response.data))
     }
-  )
+)
 
 export const productsSlice = createSlice({
     name: "product",

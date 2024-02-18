@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
-import { useNavigate } from 'react-router-dom';
 import { setIsModalVisible } from '../../redux/slices/modalSlice';
 import { addToCart } from '../../redux/slices/cartSlice';
 import style from './style.module.scss';
@@ -10,8 +9,7 @@ import style from './style.module.scss';
 export const SinglProduct: React.FC = () => {
     const dispatch = useAppDispatch();
     const { data: product } = useAppSelector((state): any => state.modal);
-    const navigate = useNavigate();
-    const [quantity, setQuantity] = useState(1);
+    const [quantity, setQuantity] = useState<number>(1);
 
     const increaseQuantity = () => {
         setQuantity((prevQuantity) => {
@@ -35,8 +33,7 @@ export const SinglProduct: React.FC = () => {
             totalPrice
         }
         dispatch(addToCart(tempProduct));
-        dispatch(setIsModalVisible(true));
-        navigate('/internet-shop/cart')
+        dispatch(setIsModalVisible(false));
     }
 
     const modalOverlayHandler = (e: any) => {
@@ -48,7 +45,7 @@ export const SinglProduct: React.FC = () => {
     return (
         <div className={style.container} onClick={modalOverlayHandler}>
             <div className={style.productdetailsmodal}>
-                <button type="button" className={style.modalclosebtn} onClick={() => dispatch(setIsModalVisible(false))}>
+                <button type='button' className={style.modalclosebtn} onClick={() => dispatch(setIsModalVisible(false))}>
                     <i className="fa fa-times-circle" aria-hidden="true"></i>
                 </button>
                 <div className={style.detailscontent}>
@@ -77,7 +74,7 @@ export const SinglProduct: React.FC = () => {
                         <span className={style.btnicon}>
                             <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                         </span>
-                        <span className={style.btntext}>Add To Cart</span>
+                        <span className={style.btntext}>{"Add To Cart"}</span>
                     </button>
                 </div>
             </div>

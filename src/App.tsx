@@ -11,8 +11,8 @@ export const App = () => {
       <Header />
       <Routes>
         <Route path='/internet-shop' element={<Main />} />
-        <Route path='/internet-shop/cart' element={<Cart />}/>
-        <Route path='*' element={<Error />}/>
+        <Route path='/internet-shop/cart' element={<Cart />} />
+        <Route path='*' element={<Error />} />
       </Routes>
     </>
   )

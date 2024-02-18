@@ -4,7 +4,7 @@ export interface IProducts {
     price: number,
     description: string,
     category: {
-        id: number, 
+        id: number,
         name: string,
         image: string
     },
@@ -13,4 +13,8 @@ export interface IProducts {
 
 export interface IProductsProps {
     products: IProducts[]
+}
+
+export interface IBasket {
+    title: string
 }

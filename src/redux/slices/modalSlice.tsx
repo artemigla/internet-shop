@@ -7,14 +7,14 @@ const modalSlice = createSlice({
         isModalVisible: false
     },
     reducers: {
-        setModalData(state, action){
+        setModalData(state, action) {
             state.data = action.payload;
         },
-        setIsModalVisible(state, action){
+        setIsModalVisible(state, action) {
             state.isModalVisible = action.payload;
         }
     }
 });
 
-export const { setModalData, setIsModalVisible} = modalSlice.actions;
+export const { setModalData, setIsModalVisible } = modalSlice.actions;
 export default modalSlice.reducer;
