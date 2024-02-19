@@ -456,3 +456,61 @@
         }
     }
 }
+
+@media screen and (max-width: 360px) {
+    .container {
+        width: 98%;
+
+        .wrapper {
+            .contentcart {
+                width: 98%;
+
+                .aboutproducts {
+                    .title {
+                        font-size: large;
+                    }
+                    .description {
+                        p {
+                            display: none;
+                        }
+                    }
+
+                    .qantityproduct {
+                        font-size: small;
+
+                        .minus {
+                            font-size: 8px;
+                        }
+
+                        .plus {
+                            font-size: 8px;
+                        }
+
+                        .quantity {
+                            font-size: large;
+                            padding: 0 8px 0 8px;
+                        }
+
+                        .price {
+                            font-size: 21px;
+                        }
+                    }
+
+                    .btnwrapper {
+                        position: relative;
+                        top: 30px;
+
+                        .btn {
+                            font-size: 12px;
+                            top: -50px;
+                        }
+                    }
+                }
+            }
+
+            .totalorders {
+                display: none;
+            }
+        }
+    }
+}

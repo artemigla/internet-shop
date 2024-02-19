@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { getProductsThunk } from '../../redux/slices/productSlice';
 import { setModalData, setIsModalVisible } from '../../redux/slices/modalSlice';
-import { SinglProduct } from '../singleProduct/SinglProduct';
+import { SinglProduct } from '../singleProduct/SingleProduct';
 import style from './style.module.scss';
 
 export const Main: React.FC = () => {

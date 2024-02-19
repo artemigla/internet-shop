@@ -57,7 +57,7 @@ export const SinglProduct: React.FC = () => {
                 <div className={style.contentRight}>
                     <div className={style.detailInfo}>
                         <h3 className={style.title}>{product.title}</h3>
-                        <p className={style.description}>{product.description}</p>
+                        <p className={style.description}>{product.description.slice(0, 120)}...</p>
                         <div className={style.price}>Price: ${product.price}</div>
                     </div>
                     <div className={style.quantity}>
