@@ -63,46 +63,23 @@
     }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 480px) {
     .container {
-        wrapper {
+
+        .title {
+            font-size: small;
+        }
+
+        .wrapper {
             .content {
                 grid-template-columns: repeat(2, 1fr);
                 column-gap: 20px;
+
+                .cart {
+                    padding: 9px;
+                }
             }
         }
     }
 }
 
-@media screen and (min-width: 768px) {
-    .container {
-        .wrapper {
-            .content {
-                grid-template-columns: repeat(3, 1fr);
-                column-gap: 20px;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .container {
-        .wrapper {
-            .content {
-                grid-template-columns: repeat(4, 1fr);
-                column-gap: 20px;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .container {
-        .wrapper {
-            .content {
-                grid-template-columns: repeat(5, 1fr);
-                column-gap: 20px;
-            }
-        }
-    }
-}
