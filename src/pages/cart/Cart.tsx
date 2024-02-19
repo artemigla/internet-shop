@@ -20,8 +20,6 @@ export const Cart: React.FC = () => {
     dispatch(removeFromCart(e));
   }
 
-  console.log('totalItems', totalItems);
-
   return (
     <div className={style.container}>
       <div className={style.wrapper}>
@@ -33,7 +31,7 @@ export const Cart: React.FC = () => {
             <div className={style.aboutproducts}>
               <p className={style.title}>{products.title}</p>
               <div className={style.description}>
-                <p>{products.description.slice(0, 210)}...</p>
+                <p>{products.description.slice(0, 170)}...</p>
               </div>
               <div className={style.qantityproduct}>
                 <span className={style.qty}>Quantity: </span>
