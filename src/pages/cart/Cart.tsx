@@ -36,12 +36,13 @@ export const Cart: React.FC = () => {
                 <p>{products.description.slice(0, 210)}...</p>
               </div>
               <div className={style.qantityproduct}>
+                <span className={style.qty}>Quantity: </span>
                 <span className={style.minus} onClick={() => dispatch(toggleCartQty({ id: products.id, type: "DEC" }))}><i className="fa fa-minus" aria-hidden="true"></i></span>
 
-                <h3 className={style.quantity}>{products.quantity}</h3>
+                <h3 className={style.quantity}> {products.quantity}</h3>
                 <span className={style.plus} onClick={() => dispatch(toggleCartQty({ id: products.id, type: "INC" }))}><i className="fa fa-plus" aria-hidden="true"></i></span>
               </div>
-              <p className={style.price}>${products.price}</p>
+              <p className={style.price}>Price: ${products.price}</p>
 
               <div className={style.btnwrapper}>
                 <button className={style.btn} onClick={() => deleteProduct(products.id)}>Delete</button>

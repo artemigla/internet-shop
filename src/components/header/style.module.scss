@@ -44,6 +44,7 @@
             width: 100%;
             height: 35px;
             outline: none;
+            position: absolute;
         }
     }
 
@@ -68,3 +69,39 @@
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+    .container {
+        height: 87px;
+
+        .rightcontent {
+            .cart {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .midcontent {
+            .npt {
+                margin-right: auto;
+                height: 21px;
+            }
+        }
+
+        .leftcontent {
+            .logo {
+                display: flex;
+                position: relative;
+
+                .imglogo {
+                    width: 50px;
+                }
+            }
+
+            .title {
+                margin-right: 50%;
+            }
+        }
+    }
+}
+

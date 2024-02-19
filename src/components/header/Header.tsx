@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
         <header className={style.container}>
             <div className={style.leftcontent}>
                 <div className={style.logo}>
-                    <img src={logo} alt="logo" />
+                    <img className={style.imglogo} src={logo} alt="logo" />
                 </div>
                 <span className={style.title}>Store</span>
             </div>
@@ -27,9 +27,7 @@ export const Header: React.FC = () => {
                     value={search}
                     onInput={handlerInput}
                 />
-                <i className="fa fa-search"
-                    style={{ fontSize: '26px', marginLeft: '93%', position: 'absolute', cursor: 'pointer' }}>
-                </i>
+                <i className={"fa fa-search"}></i>
             </div>
             <nav className={style.rightcontent}>
                 <div className={style.cart}>
