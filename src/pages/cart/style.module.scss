@@ -34,7 +34,11 @@
                 }
 
                 .description {
-                    width: 70%;
+                    width: 50%;
+
+                    p{
+                        font-size: large;
+                    }
                 }
 
                 .qantityproduct {
@@ -46,7 +50,7 @@
                     justify-content: space-between;
                     padding: 0 3px 0 3px;
 
-                    .qty{
+                    .qty {
                         font-size: larger;
                         color: cornflowerblue;
                     }
@@ -202,5 +206,47 @@
         text-align: center;
         margin-bottom: 10%;
         color: cadetblue;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 98%;
+        .wrapper {
+            .contentcart {
+                width: 98%;
+
+                .aboutproducts {
+                   .description {
+                    p {
+                        font-size: small;
+                    }
+                   }
+                }
+            }
+
+            .totalorders {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 98%;
+        .wrapper {
+            .contentcart {
+                width: 98%;
+
+                .aboutproducts {
+                   .description {
+                    p {
+                        font-size: small;
+                    }
+                   }
+                }
+            }
+        }
     }
 }
