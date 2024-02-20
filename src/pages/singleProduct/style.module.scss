@@ -168,13 +168,6 @@
                 }
 
                 .quantity {
-                    .iconquantity {
-                        .fa {
-                            font-size: small;
-                            border: 1px solid black;
-                        }
-                    }
-
                     .counter {
                         font-size: large;
                     }
@@ -195,9 +188,11 @@
     }
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 360px) and (max-width: 768px) {
     .container {
         .productdetailsmodal {
+            position: relative;
+            top: 34%;
             .detailscontent {
                 .detailsimg {
                     .img {
