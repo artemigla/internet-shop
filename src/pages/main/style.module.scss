@@ -7,7 +7,7 @@
 
     .title {
         opacity: 0.5;
-        font-size: x-large;
+        font-size: clamp(1rem, 2.5vw, 1.7rem);
         text-transform: uppercase;
     }
 
@@ -27,11 +27,12 @@
                 padding: 18px;
                 border-radius: 4px;
                 transition: all 300ms linear;
+                position: relative;
+                height: 280px;
 
                 .titleinfo {
                     opacity: 0.5;
                     text-align: center;
-
                 }
 
                 .img {
@@ -41,6 +42,11 @@
                     transition: transform 0.25s;
                     object-fit: cover;
                     cursor: pointer;
+                }
+
+                .price p {
+                    position: absolute;
+                    bottom: 0px;
                 }
             }
 
@@ -74,13 +80,13 @@
 
         .wrapper {
             .content {
-                grid-template-columns: repeat(1, 1fr);
-                column-gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 10px;
 
                 .cart {
                     padding: 9px;
 
-                    .img{
+                    .img {
                         height: 170px;
                         object-fit: contain;
                     }
@@ -92,7 +98,6 @@
 
 @media screen and (min-width: 412px) {
     .container {
-
         .title {
             font-size: small;
         }
@@ -105,7 +110,7 @@
                 .cart {
                     padding: 9px;
 
-                    .img{
+                    .img {
                         height: 190px;
                     }
                 }
@@ -114,9 +119,8 @@
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .container {
-
         .title {
             font-size: x-large;
         }
@@ -127,14 +131,14 @@
                 column-gap: 20px;
 
                 .cart {
-                    padding: 9px;                    
+                    padding: 9px;
                 }
             }
         }
     }
 }
 
-@media screen and (min-width: 1020px){
+@media screen and (min-width: 1020px) {
     .container {
         .title {
             font-size: x-large;

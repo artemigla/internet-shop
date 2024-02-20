@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { setIsModalVisible } from '../../redux/slices/modalSlice';
 import { addToCart } from '../../redux/slices/cartSlice';
 import style from './style.module.scss';
+import { formatPrice } from '../../utils/formatPrice';
 
 export const SinglProduct: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -58,7 +59,7 @@ export const SinglProduct: React.FC = () => {
                     <div className={style.detailInfo}>
                         <h3 className={style.title}>{product.title}</h3>
                         <p className={style.description}>{product.description.slice(0, 120)}...</p>
-                        <div className={style.price}>Price: ${product.price}</div>
+                        <div className={style.price}>Price: {formatPrice(product.price)}</div>
                     </div>
                     <div className={style.quantity}>
                         <span>Quantity: </span>

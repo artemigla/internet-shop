@@ -16,7 +16,7 @@ export const Cart: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [useSelector((state: any) => state.cart)]);
 
-  function deleteProduct(e: any) {
+  const deleteProduct = (e: any) => {
     dispatch(removeFromCart(e));
   }
 
@@ -40,7 +40,7 @@ export const Cart: React.FC = () => {
                 <h3 className={style.quantity}> {products.quantity}</h3>
                 <span className={style.plus} onClick={() => dispatch(toggleCartQty({ id: products.id, type: "INC" }))}><i className="fa fa-plus" aria-hidden="true"></i></span>
               </div>
-              <p className={style.price}>Price: ${products.price}</p>
+              <p className={style.price}>Price:{formatPrice(products.price)}</p>
 
               <div className={style.btnwrapper}>
                 <button className={style.btn} onClick={() => deleteProduct(products.id)}>Delete</button>

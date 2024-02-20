@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { getProductsThunk } from '../../redux/slices/productSlice';
 import { setModalData, setIsModalVisible } from '../../redux/slices/modalSlice';
 import { SinglProduct } from '../singleProduct/SingleProduct';
+import { formatPrice } from '../../utils/formatPrice';
 import style from './style.module.scss';
 
 export const Main: React.FC = () => {
@@ -32,8 +33,8 @@ export const Main: React.FC = () => {
                         <div key={products.id} className={style.cart} onClick={() => viewModalHandler(products)}>
                             <img src={products.images[0]} className={style.img} alt="" />
                             <p className={style.titleinfo}>{products.title}</p>
-                            <div>
-                                <p>${products.price}</p>
+                            <div className={style.price}>
+                                <p>Price: {formatPrice(products.price)}</p>
                             </div>
                         </div>
                     ))}

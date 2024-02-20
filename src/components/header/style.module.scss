@@ -56,15 +56,77 @@
         .cart {
             margin-left: auto;
             margin-right: 17px;
-            top: 12px;
+            display: block;
+            // top: 12px;
             width: 50px;
             height: 50px;
             background-color: white;
             border-radius: 50%;
             padding: 7px;
-
+            
+            
             .img {
                 cursor: pointer;
+                position: relative;
+                // top: -21px;
+            }
+        }
+        .totalItems {
+            display: flex;
+            position: relative;
+            right: 33px;
+            top: -20px;
+            font-size: larger;
+            padding: 0 5px 0 5px;
+            border-radius: 100%;
+            background-color: red;
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container {
+        height: 87px;
+
+        .rightcontent {
+            .cart {
+                width: 30px;
+                height: 30px;
+            }
+
+            .totalItems {
+                display: flex;
+                position: relative;
+                right: 33px;
+                top: -12px;
+                font-size: small;
+                padding: 0 5px 0 5px;
+                border-radius: 100%;
+                background-color: red;
+                color: white;
+            }
+        }
+
+        .midcontent {
+            .npt {
+                margin-right: auto;
+                height: 21px;
+            }
+        }
+
+        .leftcontent {
+            .logo {
+                display: flex;
+                position: relative;
+
+                .imglogo {
+                    width: 50px;
+                }
+            }
+
+            .title {
+                margin-right: 50%;
             }
         }
     }
@@ -105,3 +167,49 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .container {
+        height: 87px;
+
+        .rightcontent {
+            .cart {
+                width: 30px;
+                height: 30px;
+            }
+
+            .totalItems {
+                display: flex;
+                position: relative;
+                right: 33px;
+                top: -12px;
+                font-size: small;
+                padding: 0 5px 0 5px;
+                border-radius: 100%;
+                background-color: red;
+                color: white;
+            }
+        }
+
+        .midcontent {
+            .npt {
+                margin-right: auto;
+                height: 21px;
+            }
+        }
+
+        .leftcontent {
+            .logo {
+                display: flex;
+                position: relative;
+
+                .imglogo {
+                    width: 50px;
+                }
+            }
+
+            .title {
+                margin-right: 50%;
+            }
+        }
+    }
+}
