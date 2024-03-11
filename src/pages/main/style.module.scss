@@ -68,6 +68,55 @@
             }
         }
     }
+
+    .pagination {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+
+        .prevNumberPage {
+            padding: 4px 4px 4px 4px;
+            border: none;
+            border-radius: 3px;
+            font-weight: 700;
+            background-color: rgb(55, 150, 187);
+            cursor: pointer;
+        }
+
+        .noactive {
+            background-color: rgb(19, 116, 201);
+            margin: 0 5px 0 5px;
+            padding: 0 5px 0 5px;
+            border: 1px solid black;
+            font-size: 17px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .nextNumberPage {
+            padding: 4px 4px 4px 4px;
+            border: none;
+            border-radius: 3px;
+            font-weight: 700;
+            background-color: rgb(55, 150, 187);
+            cursor: pointer;
+        }
+        .counter {
+            display: flex;
+            margin: 0 10px 0 10px;
+
+            .number {
+                margin: 0 5px 0 5px;
+                padding: 0 5px 0 5px;
+                border: 1px solid black;
+                font-size: 17px;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 360px) {
